@@ -10,6 +10,37 @@ This is a monorepo for AWS API provisioning for the Danny drumsticks store
 -   [/products/{id} GET](https://xun888d5wf.execute-api.eu-west-1.amazonaws.com/dev/products/m6Gkc19AVw)
 -   [swagger](https://eqkv6cw9rf.execute-api.eu-west-1.amazonaws.com/swagger.json)
 -   [swagger-ui](https://eqkv6cw9rf.execute-api.eu-west-1.amazonaws.com/swagger)
+-   [/import](https://mil2oe0tfc.execute-api.eu-west-1.amazonaws.com/dev)
+
+# Task 5
+## Task 5.1
+1. `import-service` created
+2. new S3 bucket with the `/uploaded` folder created
+
+## Task 5.2
+1. `λ importProductsFile` created
+2. `/imoprt` url
+3. signed url generation
+4. name of the file in query parameters
+5. serverless configured
+6. response as a signed url
+7. FE integration
+
+## Task 5.3
+1. `λ importFileParser`
+2. s3 event `s3:ObjectCreated:*` configured
+3. event restrictions for only `uploaded` folder
+4. `csv-parser` reading readable stream
+
+## Task 5.4
+PR
+
+## Additional (optional) tasks
+- +10 ![#00ff00](https://placehold.co/15x15/00ff00/00ff00.png) `done` - async/await is used in lambda functions
+- +10 ![#00ff00](https://placehold.co/15x15/00ff00/00ff00.png) `done` - importProductsFile lambda is covered by unit tests. (for JS only) aws-sdk-mock can be used to mock S3 methods
+- +10 ![#00ff00](https://placehold.co/15x15/00ff00/00ff00.png) `done` - At the end of the stream the lambda function should move the file from the uploaded folder into the parsed folder (move the file means that file should be copied into a new folder in the same bucket called parsed, and then deleted from uploaded folder)
+
+
 # Task 4
 
 ## Task 4.1

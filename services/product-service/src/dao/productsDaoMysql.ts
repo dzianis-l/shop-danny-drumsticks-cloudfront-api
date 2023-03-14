@@ -145,7 +145,6 @@ export abstract class ProductsDaoMysql {
 
             return getControllerResponseInternalServerError()
         } catch (error) {
-            debugger
             return getControllerResponseInternalServerError()
         }
     }

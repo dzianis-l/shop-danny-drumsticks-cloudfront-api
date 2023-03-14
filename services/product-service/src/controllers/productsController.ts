@@ -1,7 +1,7 @@
 import { Stick, StickStock, ControllerResponse } from "../types"
 import { productsDaoFactoryMethod } from "../dao/productsDaoFactoryMethod"
 
-const dao = productsDaoFactoryMethod("mysql")
+const dao = productsDaoFactoryMethod("dynamodb")
 
 export abstract class ProductsController {
     static async getProductsList(): Promise<ControllerResponse<Stick[]>> {
